@@ -34,7 +34,7 @@ body{
     overflow: hidden;
 }
 .container{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     padding: 1.563em 0;
     grid-area: header ;
@@ -535,7 +535,7 @@ footer{
 }
 
 .btn{
-    margin: 1em;
+    margin: 1em auto;
     border-radius: 15%;
 }
 
@@ -560,14 +560,50 @@ footer{
        display: flex;
        justify-content: center;
        align-items: center;
+    } 
+    .btn{
+        width: 4.5em;
+        height: 2em;
+        text-align: center;
     }
-
-    
 }
+
 /*Animaciones*/
 .questionsCard:hover{
     transition: background-color, scale 2s;
     background-color: rgba(185, 142, 89);
     transform: scale(1.02);
     transition-delay: 1s;
+}
+
+/*bootstrap*/
+
+.marca{
+    display: flex;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-link{
+    color: var(--very-black-);
+}
+.nav-link:hover{
+   color:rgb(255, 144, 60);
+}
+
+
+.cardTitle{
+    font-size: 1.7em;
+    font-weight: bold;
+    color: var(--very-black);
+    text-align: center;
+}
+
+.questionsText{
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.card p{
+    text-align: center;
 }

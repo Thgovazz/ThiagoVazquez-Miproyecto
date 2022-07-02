@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,18 +20,31 @@
     <title>GeT in!</title>
 </head>
 <body>
-  <div class="gridContainer">
+  <!--<div class="gridContainer">-->
     <header>
-      <nav class="headerNav container">
-        <h1 class="navLogo"><a href="./index.html">GeT in!</a></h1>
-        <img src="./img/menu-icon.svg" class="navHamburger">
-
-        <ul class="navLinks">
-           <li class="navLi"><a href="./section/collection.html" class="navLink">Collection</a></li>
-           <li class="navLi"><a href="./section/accesorios.html" class="navLink">Accesories</a></li>
-           <li class="navLi"><a href="./section/nosotros.html" class="navLink">About</a></li>
-           <li class="navLi"><a href="./section/login.html" class="navLink">Login</a></li>
-        </ul>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand marca" href="./index.html">GeT in!</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="./section/collection.html">Collection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./section/accesorios.html">Accesories</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./section/nosotros.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./section/login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -36,11 +52,34 @@
       <h2 class="heroText">Fall Winter</h2>
     </div>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="cardTitle">Preguntas Frecuentes</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 card">
+          <h3 class="questionsText ">Envios</h3>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus eaque, nihil quos dolor quaerat ea animi doloremque quidem repudiandae neque iusto quis, dicta mollitia minima, cupiditate enim corrupti at aut.</p>
+        </div>
+        <div class="col-md-4 card">
+          <h3 class="questionsText">Venta por Mayor</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore at adipisci quidem? Ad porro quia commodi necessitatibus ex deserunt est adipisci officiis impedit provident a tempora minus, vel labore voluptates.</p>
+        </div>
+        <div class="col-md-4 card">
+          <h3 class="questionsText">Formas de Pago</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse ducimus, veniam, similique ad ipsam, ab sed nesciunt dolorum veritatis recusandae magni numquam perferendis. Officiis at quasi deleniti? Tenetur, quas perferendis!</p>
+        </div>  
+      </div>   
+    </div>
+    
+    <!--
     <section class="questions container">
       <div class="questionsTitleContainer">
        <h2 class="questionsTitle">Preguntas Frecuentes</h2>
       </div> 
-       <article class="questionsCard questionsCard1">
+       <article class="questionsCard questionsCard1 ">
         <h3 class="questionsText">Envios</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam dignissimos eligendi quas. Neque perferendis hic sit libero ipsum rem deleniti eaque praesentium! Incidunt iusto ducimus perferendis velit fuga recusandae eos.</p>
        </article>
@@ -53,10 +92,12 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aliquid eum amet aperiam. Laboriosam possimus est ratione, ad aliquid non sit tenetur cumque nihil perferendis, incidunt obcaecati nostrum. Nesciunt, iure.</p>
        </article>
     </section>
+    -->
 
     <footer>
       <p class="footerText">&copy;ThiagoVazquez</p>
     </footer>
-  </div>      
+  </div> 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>
