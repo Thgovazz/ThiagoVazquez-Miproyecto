@@ -535,6 +535,7 @@ footer{
 }
 
 .btn{
+    text-align: center;
     margin: 1em auto;
     border-radius: 15%;
 }
@@ -543,7 +544,7 @@ footer{
 
 @media screen and (min-width:768px){
     .btn{
-        width: 4em;
+        width: 5em;
         height: 2em;
     }
     .loginContainer, .signUpContainer{
@@ -562,9 +563,8 @@ footer{
        align-items: center;
     } 
     .btn{
-        width: 4.5em;
+        width: 5em;
         height: 2em;
-        text-align: center;
     }
 }
 
