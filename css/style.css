@@ -206,7 +206,7 @@ footer{
 }
 .containerCollectionTitle{
     grid-area: containerCollectionTitle;
-    background-color: rgba(185, 142, 89, 0.5);
+    background-color: rgb(221, 184, 146);
     
     box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
 
@@ -322,7 +322,7 @@ footer{
 
     }
     .cardDatos{
-        background-color: rgba(185, 142, 89, 0.5);
+        background-color: rgba(221, 184, 146);
         border: 0.125em solid rgba(255, 144, 60, 0.51);
     }
 
@@ -454,7 +454,7 @@ footer{
     grid-template-areas: "quienesSomosC1" "quienesSomosC2" "quienesSomosC3";
     row-gap: 0.62em;
     border: 0.19em solid rgb(255, 144, 60, 0.51);
-    background-color: rgba(185, 142, 89, 0.5);
+    background-color: rgba(221, 184, 146);
 }
 
 .quienesSomosC1{
