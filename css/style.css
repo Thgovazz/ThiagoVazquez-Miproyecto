@@ -438,69 +438,7 @@ footer{
 }
 
 /* About */
-.gridContainer4{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-areas: "header" "about" "footer";
-}
 
-.about{
-    grid-area: about;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, max-content);
-    grid-template-areas: "quienesSomosC1" "quienesSomosC2" "quienesSomosC3";
-    row-gap: 0.62em;
-    border: 0.19em solid rgb(255, 144, 60, 0.51);
-    background-color: rgba(221, 184, 146);
-}
-
-.quienesSomosC1{
-    grid-area: quienesSomosC1;
-}
-
-.quienesSomosC2{
-    grid-area: quienesSomosC2;
-}
-
-.quienesSomosC3{
-    grid-area: quienesSomosC3;
-}
-
-.aboutH2{
-    letter-spacing: 0.08em;
-   
-    
-}
-.aboutP{
-    font-family: 'Nunito', 'Roboto', sans-serif;
-    color: rgb(85, 57, 36);
-    font-weight: bold;
-    padding: 0.85em;
-}
-
-@media screen and (min-width:768px){
-    .aboutP{
-        font-size: 1.19em;
-        padding: 0.90em;
-    }
-}
-
-@media screen and (min-width:1200px){
-    .about{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 90vh;
-        width: 90vw;
-    }
-
-    .aboutP{
-        padding: 0.94em;
-    }
- }
 
 /*Login*/
 .containerGrid5{
