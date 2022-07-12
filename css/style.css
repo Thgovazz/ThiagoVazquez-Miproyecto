@@ -33,6 +33,7 @@ body{
 .container, .hero{
     overflow: hidden;
 }
+
 .container{
     width: 95%;
     margin: 0 auto;
@@ -179,13 +180,10 @@ footer{
     .questionsCard3{
         grid-area: questionsCard3;
     }
-
-    /*Collection*/
     
 }
 
-
-/*Collection contenedores*/
+/*Collection*/
 .gridContainer2{
     display: grid;
     grid-template-columns: 1fr;
@@ -272,6 +270,10 @@ footer{
 .cardDatos{
     border: 0.2em solid rgb(255, 144, 60, 0.51);
     margin: 0.312em; 
+    
+}
+.cardDatos:hover{
+    background-color: rgba(221, 184, 146);
 }
 
 .fontDatos{
@@ -303,12 +305,7 @@ footer{
     .titleDatos{
         font-size: 1.75em;
     }
-    .cardDatos p{
-        padding: 0.1em;
-
-    }
-
-}
+ }
 
 @media screen and (min-width:1200px){
     .articleCollection{
@@ -322,7 +319,6 @@ footer{
 
     }
     .cardDatos{
-        background-color: rgba(221, 184, 146);
         border: 0.125em solid rgba(255, 144, 60, 0.51);
     }
 
@@ -438,7 +434,134 @@ footer{
 }
 
 /* About */
+.gridContainer4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas: 
+    "header" 
+    "aboutUs" 
+    "team" 
+    "footer";
+    row-gap: 0.7em;
+}
 
+.aboutUs{
+    grid-area: aboutUs;
+    margin-top: 0.7em;
+    text-align: center;
+    border: 0.12em solid var(--very-black);
+    border-radius: 0.93em;
+    background-color: rgba(87, 87, 87, 0.09);
+
+}
+.aboutUs h2{
+    color: rgb(5, 4, 4);
+}
+
+.team{
+    grid-area: team;
+}
+.team{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "textTeam textTeam" "cuadroTeam cuadroTeam";
+    text-align: center;
+    row-gap: 0.30em;
+}
+
+.textAbout1{
+    color: var(--very-black);
+}
+
+.textAbout2{
+    color: var(--very-black);
+    letter-spacing: 0.24em;
+}
+.textTeam{
+    grid-area: textTeam;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image:linear-gradient(0,
+    rgba(0, 0, 0, 0.5), rgba(98, 91, 91, 0.5)) 
+    ,url(../img/nostros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+    border: 0.12em solid var(--very-black);
+    border-radius: 0.93em;
+}
+.cuadroTeam{
+    grid-area: cuadroTeam;
+}
+.fundadores, .administradores{ 
+    margin: 0.25em;
+    border: 0.12em solid var(--very-black);
+    border-radius: 0.93em;
+    text-align: center;
+}
+.fundadores h3, .administradores h3{
+    color: var(--very-black);
+    border-bottom: 0.06em solid var(--very-black);
+}
+
+.linea{
+    border: none;
+    border-top: 3px double rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+/*mediaQ*/
+@media screen and (min-width:768px){
+    .team{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, max-content);
+        grid-template-areas: "textTeam cuadroTeam" "textTeam cuadroTeam";
+        border: 0.06em solid var(--very-black);
+        background-color: var(--very-black);
+        border-radius: 0.93em; 
+    }
+    .textTeam{
+        height: 53vh;
+        margin-left: 0.31em;
+        border: 0.07em solid rgb(255, 255, 255);
+    }
+    .textAbout1{
+        font-size: 1.1em;
+    }
+    .fundadores h3, .administradores h3{
+        color: rgb(118, 120, 122);
+    }
+    .textAbout{
+        color: rgb(222, 222, 222);
+    }
+    .fundadores h3, .administradores h3{
+        color: rgb(255, 255, 255);
+        border-bottom: 0.06em solid rgb(255, 255, 255);
+    }
+    .linea{
+        border: none;
+        border-top: 3px double rgb(255, 255, 255);
+        color: rgb(255, 250, 250);
+        height: 5px;
+    }
+
+}
+
+@media screen and (min-width:1200px){
+    .aboutUs{
+        height: 55vh;
+    }
+    .textAbout1{
+        font-size: 1.4em;
+    }
+}
 
 /*Login*/
 .containerGrid5{
