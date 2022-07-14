@@ -1,0 +1,584 @@
+:root {
+  --very-black: rgb(0, 0, 0);
+  --black-:rgba(0, 0, 0, 0.5);
+  --very-beige: rgb(185, 142, 89);
+  --beige: rgba(185, 142, 89, 0.5);
+  --white: rgb(240, 240, 240);
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--white);
+}
+
+.container, .hero {
+  overflow: hidden;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1.563em 0;
+  grid-area: header;
+}
+
+/*.headerNav{
+    display: flex;
+    justify-content: space-between;
+
+}*/
+/*.navLinks{
+    display: none;
+}
+.navLogo{
+    color: var(--very-black);
+}*/
+a {
+  text-decoration: none;
+  color: var(--very-black-);
+}
+
+.hero {
+  display: flex;
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(98, 91, 91, 0.5)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 18.75em;
+  grid-area: hero;
+}
+.hero .heroText {
+  color: var(--white);
+  font-family: "Nunito";
+  padding-left: 0.5em;
+}
+
+/*.questions{
+    grid-area: questions;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    line-height: 1.5;
+    color: var(--very-black);
+}*/
+/*.questionsCard{
+    border: 0.125em solid var(--black-);
+    margin: 0.125em;
+   background-color: rgba(255, 144, 60, 0.51);
+}
+
+.questionsText{
+    letter-spacing: 0.08em;
+    color: var(--very-black);
+}*/
+footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: end;
+  margin: 0.06em;
+  padding: 0.3em;
+  font-weight: 600;
+  color: var(--black-);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 85%;
+    padding: 1.25em 0;
+  }
+  /*.questionsCard{
+      margin: 0.2em;
+  }
+
+  .questionsTitle{
+      letter-spacing: 0.1em;
+  }*/
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 95%;
+    padding: 1.25em 0;
+  }
+  /*.navHamburger{
+      display: none;
+  }
+
+  .navLogo a{
+      font-size: 1.5em;
+  }
+
+  .navLinks{
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 3em;
+  }
+  .navLink:hover{
+      color: rgb(255, 144, 60);
+  }*/
+  .hero {
+    height: 80vh;
+    background-size: cover;
+    background-position: none;
+    background-attachment: fixed;
+    align-items: center;
+    font-size: 1.6em;
+  }
+  /*.questions{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, max-content);
+      grid-template-areas: 
+      "questionsTitleContainer questionsTitleContainer questionsTitleContainer"
+      "questionsCard1 questionsCard2 questionsCard3";
+  }
+
+  .questionsTitleContainer{
+      grid-area: questionsTitleContainer;
+  }
+  .questionsCard1{
+   grid-area: questionsCard1;
+  }
+  .questionsCard2{
+      grid-area: questionsCard2;
+  }
+  .questionsCard3{
+      grid-area: questionsCard3;
+  }*/
+}
+/*Collection*/
+.gridContainer2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, -webkit-max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas: "header" "collection" "collectionDatos" "footer";
+}
+
+.collection {
+  grid-area: collection;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, -webkit-max-content);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas: "containerCollectionTitle containerCollectionTitle" "articleCollection1 articleCollection2" "articleCollection3 articleCollection4";
+  gap: 0.63em;
+}
+.collection .containerCollectionTitle {
+  grid-area: containerCollectionTitle;
+  background-color: rgb(221, 184, 146);
+  box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+}
+.collection .articleCollection1 {
+  grid-area: articleCollection1;
+  background-image: url(../img/campera\ street.webp);
+  background-size: cover;
+}
+.collection .articleCollection2 {
+  grid-area: articleCollection2;
+  background-image: url(../img/pantalon\ street.webp);
+  background-size: cover;
+}
+.collection .articleCollection3 {
+  grid-area: articleCollection3;
+  background-image: url(../img/piluso.webp);
+  background-size: cover;
+}
+.collection .articleCollection4 {
+  grid-area: articleCollection4;
+  background-image: url(../img/campera\ skin.webp);
+  background-size: cover;
+}
+
+.collectionDatos {
+  grid-area: collectionDatos;
+  text-align: center;
+}
+.collectionDatos .titleDatosContainer {
+  grid-area: titleDatos;
+}
+.collectionDatos .cardDatos1 {
+  grid-area: cardDatos1;
+}
+.collectionDatos .cardDatos2 {
+  grid-area: cardDatos2;
+}
+.collectionDatos .cardDatos3 {
+  grid-area: cardDatos3;
+}
+.collectionDatos .cardDatos {
+  border: 0.2em solid rgba(255, 144, 60, 0.51);
+  margin: 0.312em;
+}
+.collectionDatos .cardDatos:hover {
+  background-color: rgb(221, 184, 146);
+}
+.collectionDatos .fontDatos {
+  font-family: "Roboto", sans-serif;
+  padding: 0.06em;
+}
+
+/*Collection y Accesories*/
+.articleCollection, .articleAccesories {
+  height: 50vh;
+}
+
+.collectionFont, .accesoriesFont {
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-weight: 600;
+  background-color: rgba(255, 144, 60, 0.51);
+}
+
+@media screen and (min-width: 768px) {
+  .articleCollection {
+    height: 70vh;
+  }
+  .fontDatos {
+    font-size: 1.4em;
+  }
+  .titleDatos {
+    font-size: 1.75em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .articleCollection {
+    height: 100vh;
+  }
+  .collectionDatos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "titleDatos titleDatos titleDatos" "cardDatos1 cardDatos2 cardDatos3";
+  }
+  .collectionDatos .cardDatos {
+    border: 0.125em solid rgba(255, 144, 60, 0.51);
+  }
+  .collectionDatos .fontDatos {
+    font-size: 1.3em;
+  }
+}
+/*Accesories*/
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, -webkit-max-content);
+  grid-template-rows: repeat(3, max-content);
+  grid-template-areas: "header" "accesories" "footer";
+}
+
+.accesories {
+  text-align: center;
+  grid-area: accesories;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, -webkit-max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas: "containerAccesoriesTitle" "accesoriesTeddy" "accesoriesMedias" "accesoriesBufanda";
+  gap: 0.62em;
+}
+.accesories .containerAccesoriesTitle {
+  grid-area: containerAccesoriesTitle;
+}
+.accesories .accesoriesTitle {
+  background-color: rgba(185, 142, 89, 0.5);
+  box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+}
+.accesories .accesoriesTeddy {
+  grid-area: accesoriesTeddy;
+  background-image: url(../img/bandolera\ teddy.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.accesories .accesoriesMedias {
+  grid-area: accesoriesMedias;
+  background-image: url(../img/medias\ alien.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.accesories .accesoriesBufanda {
+  grid-area: accesoriesBufanda;
+  background-image: url(../img/bufanda.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .articleAccesories {
+    height: 70vh;
+  }
+  .accesoriesTeddy {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .accesoriesMedias {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .accesoriesBufanda {
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    border: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .articleAccesories {
+    height: 100vh;
+  }
+  .accesories {
+    text-align: center;
+    grid-area: accesories;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "containerAccesoriesTitle containerAccesoriesTitle containerAccesoriesTitle" "accesoriesTeddy accesoriesMedias accesoriesBufanda";
+    gap: 0.62em;
+  }
+  .accesoriesTeddy:hover {
+    background-image: url(../img/bandolera\ teddy2.webp);
+  }
+  .accesoriesMedias:hover {
+    background-image: url(../img/medias\ alien2.png);
+  }
+  .accesoriesBufanda:hover {
+    background-image: url(../img/bufanda\ 2.png);
+  }
+}
+/* About */
+.gridContainer4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, -webkit-max-content);
+  grid-template-rows: repeat(4, max-content);
+  grid-template-areas: "header" "aboutUs" "team" "footer";
+  row-gap: 0.7em;
+}
+
+.aboutUs {
+  grid-area: aboutUs;
+  margin-top: 0.7em;
+  text-align: center;
+  border: 0.12em solid var(--very-black);
+  border-radius: 0.93em;
+  background-color: rgba(87, 87, 87, 0.09);
+}
+.aboutUs .aboutUs h2 {
+  color: rgb(5, 4, 4);
+}
+.aboutUs .textAbout1 {
+  color: var(--very-black);
+}
+
+.team {
+  grid-area: team;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, -webkit-max-content);
+  grid-template-rows: repeat(2, max-content);
+  grid-template-areas: "textTeam textTeam" "cuadroTeam cuadroTeam";
+  text-align: center;
+  row-gap: 0.3em;
+}
+
+.textTeam {
+  grid-area: textTeam;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(98, 91, 91, 0.5)), url(../img/nostros.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  border: 0.12em solid var(--very-black);
+  border-radius: 0.93em;
+}
+.textTeam .textAbout2 {
+  color: var(--very-black);
+  letter-spacing: 0.24em;
+}
+
+.cuadroTeam {
+  grid-area: cuadroTeam;
+}
+
+.fundadores, .administradores {
+  margin: 0.25em;
+  border: 0.12em solid var(--very-black);
+  border-radius: 0.93em;
+  text-align: center;
+}
+
+.fundadores h3, .administradores h3 {
+  color: var(--very-black);
+  border-bottom: 0.06em solid var(--very-black);
+}
+
+.linea {
+  border: none;
+  border-top: 3px double rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+/*mediaQ*/
+@media screen and (min-width: 768px) {
+  .team {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, -webkit-max-content);
+    grid-template-rows: repeat(2, max-content);
+    grid-template-areas: "textTeam cuadroTeam" "textTeam cuadroTeam";
+    border: 0.06em solid var(--very-black);
+    background-color: var(--very-black);
+    border-radius: 0.93em;
+  }
+  .team .textTeam {
+    height: 53vh;
+    margin-left: 0.31em;
+    border: 0.07em solid rgb(255, 255, 255);
+  }
+  .textAbout1 {
+    font-size: 1.1em;
+  }
+  /*.fundadores h3, .administradores h3{
+      color: rgb(118, 120, 122);
+  }*/
+  .textAbout {
+    color: rgb(222, 222, 222);
+  }
+  .fundadores h3, .administradores h3 {
+    color: rgb(255, 255, 255);
+    border-bottom: 0.06em solid rgb(255, 255, 255);
+  }
+  .linea {
+    border: none;
+    border-top: 3px double rgb(255, 255, 255);
+    color: rgb(255, 250, 250);
+    height: 5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .aboutUs {
+    height: 55vh;
+  }
+  .aboutUs .textAbout1 {
+    font-size: 1.4em;
+  }
+}
+/*Login*/
+.containerGrid5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, max-width);
+  grid-template-areas: "header" "loginContainer" "signUpContainer" "footer";
+  row-gap: 0.94em;
+}
+
+.loginContainer, .signUpContainer {
+  box-shadow: 0.125em 0.125em rgb(85, 57, 36);
+}
+
+.loginContainer {
+  text-align: center;
+  background-color: rgba(255, 144, 60, 0.51);
+  grid-area: loginContainer;
+}
+
+.signUpContainer {
+  background-color: rgba(185, 142, 89, 0.5);
+  text-align: center;
+  grid-area: signUpContainer;
+}
+
+.loginText {
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.31em;
+  margin: 0.24;
+}
+
+.btn {
+  text-align: center;
+  margin: 1em auto;
+  border-radius: 15%;
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    width: 5em;
+    height: 2em;
+  }
+  .loginContainer, .signUpContainer {
+    width: 75vw;
+    box-shadow: 0.125em 0.125em rgb(85, 57, 36);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .loginContainer, .signUpContainer {
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    width: 5em;
+    height: 2em;
+  }
+}
+/*Animaciones*/
+.questionsCard:hover {
+  transition: background-color, scale 2s;
+  background-color: rgb(185, 142, 89);
+  transform: scale(1.02);
+  transition-delay: 1s;
+}
+
+/*bootstrap*/
+.marca {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: var(--very-black-);
+}
+
+.nav-link:hover {
+  color: rgb(255, 144, 60);
+}
+
+.cardTitle {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: var(--very-black);
+  text-align: center;
+}
+
+.questionsText {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+}/*# sourceMappingURL=estilos.css.map */
