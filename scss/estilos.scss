@@ -18,18 +18,6 @@ body{
     background-color: var(--white);
 }
 
-.gridContainer{
-    display: grid;
-    max-width: 1400px; 
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(4, max-content);
-    grid-template-areas: 
-    "header"
-    "hero"
-    "questions"
-    "footer";
-}
 .container, .hero{
     overflow: hidden;
 }
@@ -41,18 +29,19 @@ body{
     grid-area: header ;
 }
 
-.headerNav{
+/*.headerNav{
     display: flex;
     justify-content: space-between;
    
-}
+}*/
 
-.navLinks{
+/*.navLinks{
     display: none;
 }
 .navLogo{
     color: var(--very-black);
-}
+}*/
+
 a{
     text-decoration: none;
     color: var(--very-black-);
@@ -67,15 +56,16 @@ a{
     background-position: center;
     min-height: 18.75em;
     grid-area: hero;
+    .heroText{
+        color: var(--white);
+       font-family: 'Nunito';
+       padding-left: 0.5em;
+    }
+    
 }
 
-.heroText{
-    color: var(--white);
-   font-family: 'Nunito';
-   padding-left: 0.5em;
-}
 
-.questions{
+/*.questions{
     grid-area: questions;
     display: flex;
     flex-direction: column;
@@ -85,9 +75,9 @@ a{
     margin-bottom: 0.5em;
     line-height: 1.5;
     color: var(--very-black);
-}
+}*/
 
-.questionsCard{
+/*.questionsCard{
     border: 0.125em solid var(--black-);
     margin: 0.125em;
    background-color: rgba(255, 144, 60, 0.51);
@@ -96,14 +86,14 @@ a{
 .questionsText{
     letter-spacing: 0.08em;
     color: var(--very-black);
-}
+}*/
 
 footer{
     grid-area: footer;
     display: flex;
     justify-content: end;
-    margin: 0.12em;
-    padding: 0.5em;
+    margin: 0.06em;
+    padding: 0.3em;
     font-weight: 600;
     color: var(--black-);
 }
@@ -115,13 +105,13 @@ footer{
         padding: 1.25em 0;
     }
 
-    .questionsCard{
+    /*.questionsCard{
         margin: 0.2em;
     }
 
     .questionsTitle{
         letter-spacing: 0.1em;
-    }
+    }*/
   
 } 
 
@@ -132,7 +122,7 @@ footer{
     }
 
 
-    .navHamburger{
+    /*.navHamburger{
         display: none;
     }
 
@@ -148,7 +138,7 @@ footer{
     }
     .navLink:hover{
         color: rgb(255, 144, 60);
-    }
+    }*/
 
     .hero{
         height: 80vh;
@@ -159,7 +149,7 @@ footer{
         font-size: 1.6em;
     }
 
-    .questions{
+    /*.questions{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, max-content);
@@ -179,7 +169,7 @@ footer{
     }
     .questionsCard3{
         grid-area: questionsCard3;
-    }
+    }*/
     
 }
 
@@ -197,35 +187,6 @@ footer{
 
 .collection{
     grid-area: collection;
-}
-.collectionDatos{
-    grid-area: collectionDatos;
-    text-align: center;
-}
-.containerCollectionTitle{
-    grid-area: containerCollectionTitle;
-    background-color: rgb(221, 184, 146);
-    
-    box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
-
-}
-.articleCollection1{
-    grid-area: articleCollection1;
-}
-.articleCollection2{
-    grid-area: articleCollection2;
-
-}
-.articleCollection3{
-    grid-area: articleCollection3;
-
-}
-.articleCollection4{
-    grid-area: articleCollection4;
-
-}
-
-.collection{
     display: grid;
     justify-content: center;
     align-items: center;
@@ -234,65 +195,74 @@ footer{
     grid-template-rows: repeat(3, max-content);
     grid-template-areas: "containerCollectionTitle containerCollectionTitle" "articleCollection1 articleCollection2" "articleCollection3 articleCollection4";
     gap: 0.63em;
-}
+    .containerCollectionTitle{
+        grid-area: containerCollectionTitle;
+        background-color: rgb(221, 184, 146);
+        
+        box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+    
+    }
+    .articleCollection1{
+        grid-area: articleCollection1;
+        background-image: url(../img/campera\ street.webp);
+        background-size: cover;
+    }
+    .articleCollection2{
+        grid-area: articleCollection2;
+        background-image: url(../img/pantalon\ street.webp);
+        background-size: cover;
+    
+    }
+    .articleCollection3{
+        grid-area: articleCollection3;
+        background-image: url(../img/piluso.webp);
+        background-size: cover;
+    }
 
+    .articleCollection4{
+        grid-area: articleCollection4;
+        background-image: url(../img/campera\ skin.webp);
+        background-size: cover;
+    }
+}
+.collectionDatos{
+    grid-area: collectionDatos;
+    text-align: center;
+    .titleDatosContainer{
+        grid-area: titleDatos;
+    }
+    .cardDatos1{
+        grid-area: cardDatos1;
+    }
+    .cardDatos2{
+        grid-area: cardDatos2;
+    }
+    .cardDatos3{
+        grid-area: cardDatos3;
+    }
+    .cardDatos{
+        border: 0.2em solid rgb(255, 144, 60, 0.51);
+        margin: 0.312em; 
+        
+    }
+     .cardDatos:hover{
+        background-color: rgba(221, 184, 146);
+     }
+    .fontDatos{
+        font-family:'Roboto', sans-serif;
+        padding: 0.06em;
+    } 
+}
+/*Collection y Accesories*/
 .articleCollection, .articleAccesories{
     height: 50vh;
 }
 
-.articleCollection1{
-    background-image: url(../img/campera\ street.webp);
-    background-size: cover;
-
-}
-.articleCollection2{
-    background-image: url(../img/pantalon\ street.webp);
-    background-size: cover;
-
-}
-.articleCollection3{
-    background-image: url(../img/piluso.webp);
-    background-size: cover;
-
-}
-.articleCollection4{
-    background-image: url(../img/campera\ skin.webp);
-    background-size: cover;
-
-}
 
 .collectionFont, .accesoriesFont{
     font-family: 'Nunito', 'Roboto', sans-serif;
     font-weight: 600;
     background-color:rgba(255, 144, 60, 0.51);
-}
-
-.cardDatos{
-    border: 0.2em solid rgb(255, 144, 60, 0.51);
-    margin: 0.312em; 
-    
-}
-.cardDatos:hover{
-    background-color: rgba(221, 184, 146);
-}
-
-.fontDatos{
-    font-family:'Roboto', sans-serif;
-    padding: 0.06em;
-}
-
-.titleDatosContainer{
-    grid-area: titleDatos;
-}
-
-.cardDatos1{
-    grid-area: cardDatos1;
-}
-.cardDatos2{
-    grid-area: cardDatos2;
-}
-.cardDatos3{
-    grid-area: cardDatos3;
 }
 
 @media screen and (min-width:768px){
@@ -316,16 +286,15 @@ footer{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, max-content);
         grid-template-areas: "titleDatos titleDatos titleDatos" "cardDatos1 cardDatos2 cardDatos3";
+        .cardDatos{
+            border: 0.125em solid rgba(255, 144, 60, 0.51);
+        }
+         .fontDatos{
+            font-size: 1.3em;
+         }
 
     }
-    .cardDatos{
-        border: 0.125em solid rgba(255, 144, 60, 0.51);
-    }
-
-    .fontDatos{
-        font-size: 1.3em;
-    }
-
+   
 }
 
 /*Accesories*/
@@ -345,41 +314,37 @@ footer{
     grid-template-rows: repeat(4, max-content);
     grid-template-areas: "containerAccesoriesTitle" "accesoriesTeddy" "accesoriesMedias" "accesoriesBufanda";
     gap: 0.62em;
-}
+    .containerAccesoriesTitle{
+        grid-area: containerAccesoriesTitle;
+    }
+     .accesoriesTitle{
+        background-color: rgba(185, 142, 89, 0.5);
+        
+        box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+     }
 
-
-.accesoriesTitle{
-    background-color: rgba(185, 142, 89, 0.5);
+    .accesoriesTeddy{
+        grid-area: accesoriesTeddy;
+        background-image: url(../img/bandolera\ teddy.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+    .accesoriesMedias{
+        grid-area: accesoriesMedias;
+        background-image: url(../img/medias\ alien.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
     
-    box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
-}
-
-.containerAccesoriesTitle{
-    grid-area: containerAccesoriesTitle;
-}
-
-.accesoriesTeddy{
-    grid-area: accesoriesTeddy;
-    background-image: url(../img/bandolera\ teddy.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.accesoriesMedias{
-    grid-area: accesoriesMedias;
-    background-image: url(../img/medias\ alien.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.accesoriesBufanda{
-    grid-area: accesoriesBufanda;
-    background-image: url(../img/bufanda.webp);
-    background-size:cover;
-    background-repeat: no-repeat;
-   
+    .accesoriesBufanda{
+        grid-area: accesoriesBufanda;
+        background-image: url(../img/bufanda.webp);
+        background-size:cover;
+        background-repeat: no-repeat;
+       
+    }
 }
 
 @media screen and (min-width:768px){
@@ -453,16 +418,16 @@ footer{
     border: 0.12em solid var(--very-black);
     border-radius: 0.93em;
     background-color: rgba(87, 87, 87, 0.09);
-
-}
-.aboutUs h2{
-    color: rgb(5, 4, 4);
+    .aboutUs h2{
+        color: rgb(5, 4, 4);
+    }
+    .textAbout1{
+        color: var(--very-black);
+    }
 }
 
 .team{
     grid-area: team;
-}
-.team{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, max-content);
@@ -471,14 +436,6 @@ footer{
     row-gap: 0.30em;
 }
 
-.textAbout1{
-    color: var(--very-black);
-}
-
-.textAbout2{
-    color: var(--very-black);
-    letter-spacing: 0.24em;
-}
 .textTeam{
     grid-area: textTeam;
     display: flex;
@@ -492,10 +449,16 @@ footer{
     height: 30vh;
     border: 0.12em solid var(--very-black);
     border-radius: 0.93em;
+      .textAbout2{
+        color: var(--very-black);
+        letter-spacing: 0.24em;
+      }
 }
+
 .cuadroTeam{
     grid-area: cuadroTeam;
-}
+}  
+
 .fundadores, .administradores{ 
     margin: 0.25em;
     border: 0.12em solid var(--very-black);
@@ -526,18 +489,19 @@ footer{
         border: 0.06em solid var(--very-black);
         background-color: var(--very-black);
         border-radius: 0.93em; 
+        .textTeam{
+            height: 53vh;
+            margin-left: 0.31em;
+            border: 0.07em solid rgb(255, 255, 255);
+        }
     }
-    .textTeam{
-        height: 53vh;
-        margin-left: 0.31em;
-        border: 0.07em solid rgb(255, 255, 255);
-    }
+   
     .textAbout1{
         font-size: 1.1em;
     }
     .fundadores h3, .administradores h3{
         color: rgb(118, 120, 122);
-    }
+    }*/
     .textAbout{
         color: rgb(222, 222, 222);
     }
@@ -557,10 +521,11 @@ footer{
 @media screen and (min-width:1200px){
     .aboutUs{
         height: 55vh;
+        .textAbout1{
+            font-size: 1.4em;
+        }
     }
-    .textAbout1{
-        font-size: 1.4em;
-    }
+   
 }
 
 /*Login*/
