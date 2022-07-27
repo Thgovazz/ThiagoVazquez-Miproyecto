@@ -1,16 +1,16 @@
-:root{
+:root {
     --very-black: rgb(0, 0, 0);
     --black-:rgba(0, 0, 0, 0.5);
     --very-beige: rgb(185, 142, 89);
     --beige: rgba(185, 142, 89, 0.5);
     --white: rgb(240, 240, 240);
-
-}
+  }
 
 *{
-    margin: 0;
+    margin:0;
     box-sizing: border-box;
     padding: 0;
+    border: 0;
 }
 
 body{
@@ -185,6 +185,11 @@ footer{
     "footer";  
 }
 
+/*mixin*/
+@mixin pic-collection {
+    background-size: cover;
+}
+
 .collection{
     grid-area: collection;
     display: grid;
@@ -205,24 +210,24 @@ footer{
     .articleCollection1{
         grid-area: articleCollection1;
         background-image: url(../img/campera\ street.webp);
-        background-size: cover;
+        @include pic-collection;
     }
     .articleCollection2{
         grid-area: articleCollection2;
         background-image: url(../img/pantalon\ street.webp);
-        background-size: cover;
+        @include pic-collection;
     
     }
     .articleCollection3{
         grid-area: articleCollection3;
         background-image: url(../img/piluso.webp);
-        background-size: cover;
+        @include pic-collection;
     }
 
     .articleCollection4{
         grid-area: articleCollection4;
         background-image: url(../img/campera\ skin.webp);
-        background-size: cover;
+        @include pic-collection;
     }
 }
 .collectionDatos{
@@ -501,7 +506,7 @@ footer{
     }
     .fundadores h3, .administradores h3{
         color: rgb(118, 120, 122);
-    }*/
+    }
     .textAbout{
         color: rgb(222, 222, 222);
     }

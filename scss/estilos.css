@@ -10,6 +10,7 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  border: 0;
 }
 
 body {
@@ -163,6 +164,7 @@ footer {
   grid-template-areas: "header" "collection" "collectionDatos" "footer";
 }
 
+/*mixin*/
 .collection {
   grid-area: collection;
   display: grid;
@@ -457,9 +459,9 @@ footer {
   .textAbout1 {
     font-size: 1.1em;
   }
-  /*.fundadores h3, .administradores h3{
-      color: rgb(118, 120, 122);
-  }*/
+  .fundadores h3, .administradores h3 {
+    color: rgb(118, 120, 122);
+  }
   .textAbout {
     color: rgb(222, 222, 222);
   }
