@@ -1,11 +1,13 @@
-:root {
-  --very-black: rgb(0, 0, 0);
-  --black-:rgba(0, 0, 0, 0.5);
-  --very-beige: rgb(185, 142, 89);
-  --beige: rgba(185, 142, 89, 0.5);
-  --white: rgb(240, 240, 240);
+/*mixin*/
+.whatsApp {
+  color: rgb(221, 184, 146);
 }
 
+.Instagram {
+  color: rgb(0, 0, 0);
+}
+
+/*Estilos generales*/
 * {
   margin: 0;
   box-sizing: border-box;
@@ -15,7 +17,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: var(--white);
+  background-color: rgb(240, 240, 240);
 }
 
 .container, .hero {
@@ -27,6 +29,15 @@ body {
   margin: 0 auto;
   padding: 1.563em 0;
   grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  margin: 0.06em;
+  padding: 0.3em;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 /*.headerNav{
@@ -42,7 +53,7 @@ body {
 }*/
 a {
   text-decoration: none;
-  color: var(--very-black-);
+  color: rgb(0, 0, 0);
 }
 
 .hero {
@@ -54,7 +65,7 @@ a {
   grid-area: hero;
 }
 .hero .heroText {
-  color: var(--white);
+  color: rgb(240, 240, 240);
   font-family: "Nunito";
   padding-left: 0.5em;
 }
@@ -80,16 +91,6 @@ a {
     letter-spacing: 0.08em;
     color: var(--very-black);
 }*/
-footer {
-  grid-area: footer;
-  display: flex;
-  justify-content: end;
-  margin: 0.06em;
-  padding: 0.3em;
-  font-weight: 600;
-  color: var(--black-);
-}
-
 @media screen and (min-width: 768px) {
   .container {
     width: 85%;
@@ -126,7 +127,7 @@ footer {
       color: rgb(255, 144, 60);
   }*/
   .hero {
-    height: 80vh;
+    height: 85vh;
     background-size: cover;
     background-position: none;
     background-attachment: fixed;
@@ -164,7 +165,6 @@ footer {
   grid-template-areas: "header" "collection" "collectionDatos" "footer";
 }
 
-/*mixin*/
 .collection {
   grid-area: collection;
   display: grid;
@@ -176,11 +176,16 @@ footer {
   grid-template-rows: repeat(3, max-content);
   grid-template-areas: "containerCollectionTitle containerCollectionTitle" "articleCollection1 articleCollection2" "articleCollection3 articleCollection4";
   gap: 0.63em;
+  /*MapGet*/
+  /*Mixin*/
 }
 .collection .containerCollectionTitle {
   grid-area: containerCollectionTitle;
   background-color: rgb(221, 184, 146);
   box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+}
+.collection .containerCollectionTitle .collectionTitle {
+  padding-top: 0.18em;
 }
 .collection .articleCollection1 {
   grid-area: articleCollection1;
@@ -207,6 +212,10 @@ footer {
   grid-area: collectionDatos;
   text-align: center;
 }
+.collectionDatos .fontDatos {
+  font-family: "Roboto", sans-serif;
+  padding: 0.06em;
+}
 .collectionDatos .titleDatosContainer {
   grid-area: titleDatos;
 }
@@ -225,10 +234,6 @@ footer {
 }
 .collectionDatos .cardDatos:hover {
   background-color: rgb(221, 184, 146);
-}
-.collectionDatos .fontDatos {
-  font-family: "Roboto", sans-serif;
-  padding: 0.06em;
 }
 
 /*Collection y Accesories*/
@@ -292,8 +297,6 @@ footer {
 }
 .accesories .containerAccesoriesTitle {
   grid-area: containerAccesoriesTitle;
-}
-.accesories .accesoriesTitle {
   background-color: rgba(185, 142, 89, 0.5);
   box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
 }
@@ -338,9 +341,6 @@ footer {
   }
 }
 @media screen and (min-width: 1200px) {
-  .articleAccesories {
-    height: 100vh;
-  }
   .accesories {
     text-align: center;
     grid-area: accesories;
@@ -350,6 +350,9 @@ footer {
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: "containerAccesoriesTitle containerAccesoriesTitle containerAccesoriesTitle" "accesoriesTeddy accesoriesMedias accesoriesBufanda";
     gap: 0.62em;
+  }
+  .accesories .articleAccesories {
+    height: 100vh;
   }
   .accesoriesTeddy:hover {
     background-image: url(../img/bandolera\ teddy2.webp);
@@ -373,17 +376,20 @@ footer {
 
 .aboutUs {
   grid-area: aboutUs;
+  height: 75vh;
   margin-top: 0.7em;
   text-align: center;
-  border: 0.12em solid var(--very-black);
+  border: 0.12em solid rgb(0, 0, 0);
   border-radius: 0.93em;
   background-color: rgba(87, 87, 87, 0.09);
 }
-.aboutUs .aboutUs h2 {
+.aboutUs h1 {
   color: rgb(5, 4, 4);
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
 }
 .aboutUs .textAbout1 {
-  color: var(--very-black);
+  color: rgb(0, 0, 0);
 }
 
 .team {
@@ -396,8 +402,7 @@ footer {
   text-align: center;
   row-gap: 0.3em;
 }
-
-.textTeam {
+.team .textTeam {
   grid-area: textTeam;
   display: flex;
   justify-content: center;
@@ -406,11 +411,11 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   height: 30vh;
-  border: 0.12em solid var(--very-black);
+  border: 0.12em solid rgb(0, 0, 0);
   border-radius: 0.93em;
 }
-.textTeam .textAbout2 {
-  color: var(--very-black);
+.team .textTeam .textAbout2 {
+  color: rgb(0, 0, 0);
   letter-spacing: 0.24em;
 }
 
@@ -420,14 +425,13 @@ footer {
 
 .fundadores, .administradores {
   margin: 0.25em;
-  border: 0.12em solid var(--very-black);
+  border: 0.12em solid rgb(0, 0, 0);
   border-radius: 0.93em;
   text-align: center;
 }
-
 .fundadores h3, .administradores h3 {
-  color: var(--very-black);
-  border-bottom: 0.06em solid var(--very-black);
+  color: rgb(0, 0, 0);
+  border-bottom: 0.06em solid rgb(0, 0, 0);
 }
 
 .linea {
@@ -441,26 +445,27 @@ footer {
 
 /*mediaQ*/
 @media screen and (min-width: 768px) {
+  .aboutUs {
+    height: 40vh;
+  }
+  .aboutUs .textAbout1 {
+    font-size: 1.1em;
+  }
   .team {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, -webkit-max-content);
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: "textTeam cuadroTeam" "textTeam cuadroTeam";
-    border: 0.06em solid var(--very-black);
-    background-color: var(--very-black);
+    border: 0.06em solid rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0);
     border-radius: 0.93em;
+    height: 45vh;
   }
   .team .textTeam {
-    height: 53vh;
+    height: 40vh;
     margin-left: 0.31em;
     border: 0.07em solid rgb(255, 255, 255);
-  }
-  .textAbout1 {
-    font-size: 1.1em;
-  }
-  .fundadores h3, .administradores h3 {
-    color: rgb(118, 120, 122);
   }
   .textAbout {
     color: rgb(222, 222, 222);
@@ -483,6 +488,12 @@ footer {
   .aboutUs .textAbout1 {
     font-size: 1.4em;
   }
+  .team {
+    height: 56vh;
+  }
+  .team .textTeam {
+    height: 50vh;
+  }
 }
 /*Login*/
 .containerGrid5 {
@@ -502,14 +513,7 @@ footer {
   background-color: rgba(255, 144, 60, 0.51);
   grid-area: loginContainer;
 }
-
-.signUpContainer {
-  background-color: rgba(185, 142, 89, 0.5);
-  text-align: center;
-  grid-area: signUpContainer;
-}
-
-.loginText {
+.loginContainer .loginText {
   font-family: "Nunito", "Roboto", sans-serif;
   font-weight: bold;
   font-size: 1.2em;
@@ -517,12 +521,21 @@ footer {
   margin: 0.24;
 }
 
-.btn {
+.signUpContainer {
+  background-color: rgba(185, 142, 89, 0.5);
   text-align: center;
-  margin: 1em auto;
-  border-radius: 15%;
+  grid-area: signUpContainer;
 }
 
+.btnLogin, .btnRegistrarse {
+  text-align: center;
+  margin: 1em auto;
+  padding: 0.12em;
+  border-radius: 15%;
+  border: 0.06em solid rgb(0, 0, 0);
+}
+
+/*extend*/
 @media screen and (min-width: 768px) {
   .btn {
     width: 5em;
@@ -554,7 +567,7 @@ footer {
   transition-delay: 1s;
 }
 
-/*bootstrap*/
+/**/
 .marca {
   display: flex;
   font-size: 1.5em;
@@ -562,7 +575,7 @@ footer {
 }
 
 .nav-link {
-  color: var(--very-black-);
+  color: rgb(0, 0, 0);
 }
 
 .nav-link:hover {
@@ -572,7 +585,7 @@ footer {
 .cardTitle {
   font-size: 1.7em;
   font-weight: bold;
-  color: var(--very-black);
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 
@@ -583,4 +596,16 @@ footer {
 
 .card p {
   text-align: center;
+}
+
+.footerIndex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footerIndex .iconsIndex {
+  display: flex;
+  gap: 0.5em;
+  margin-left: 1em;
 }/*# sourceMappingURL=estilos.css.map */

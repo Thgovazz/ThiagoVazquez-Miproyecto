@@ -1,0 +1,7 @@
+$redes:( whatsApp: rgb(221, 184, 146), Instagram: rgb(0, 0, 0));
+
+@each $red, $color in $redes{
+    .#{$red} {
+        color: $color;
+    }
+}
