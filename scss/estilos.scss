@@ -31,17 +31,6 @@
     font-weight: 600;
     color: $black;
   }
-  /*.headerNav{
-      display: flex;
-      justify-content: space-between;
-  
-  }*/
-  /*.navLinks{
-      display: none;
-  }
-  .navLogo{
-      color: var(--very-black);
-  }*/
   a {
     text-decoration: none;
     color: $very-black;
@@ -61,64 +50,19 @@
     }
   }
   
-  /*.questions{
-      grid-area: questions;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      text-align: center;
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-      line-height: 1.5;
-      color: var(--very-black);
-  }*/
-  /*.questionsCard{
-      border: 0.125em solid var(--black-);
-      margin: 0.125em;
-     background-color: rgba(255, 144, 60, 0.51);
-  }
-  
-  .questionsText{
-      letter-spacing: 0.08em;
-      color: var(--very-black);
-  }*/
- 
   
   @media screen and (min-width: 768px) {
     .container {
       width: 85%;
       padding: 1.25em 0;
     }
-    /*.questionsCard{
-        margin: 0.2em;
-    }
-  
-    .questionsTitle{
-        letter-spacing: 0.1em;
-    }*/
   }
   @media screen and (min-width: 1200px) {
     .container {
       width: 95%;
       padding: 1.25em 0;
     }
-    /*.navHamburger{
-        display: none;
-    }
-  
-    .navLogo a{
-        font-size: 1.5em;
-    }
-  
-    .navLinks{
-        display: flex;
-        align-items: center;
-        list-style: none;
-        gap: 3em;
-    }
-    .navLink:hover{
-        color: rgb(255, 144, 60);
-    }*/
+
     .hero {
       height: 85vh;
       background-size: cover;
@@ -127,27 +71,6 @@
       align-items: center;
       font-size: 1.6em;
     }
-    /*.questions{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, max-content);
-        grid-template-areas: 
-        "questionsTitleContainer questionsTitleContainer questionsTitleContainer"
-        "questionsCard1 questionsCard2 questionsCard3";
-    }
-  
-    .questionsTitleContainer{
-        grid-area: questionsTitleContainer;
-    }
-    .questionsCard1{
-     grid-area: questionsCard1;
-    }
-    .questionsCard2{
-        grid-area: questionsCard2;
-    }
-    .questionsCard3{
-        grid-area: questionsCard3;
-    }*/
   }
   /*Collection*/
   .gridContainer2 {
