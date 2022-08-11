@@ -17,7 +17,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(244, 244, 244);
 }
 
 .container, .hero {
@@ -31,31 +31,29 @@ body {
   grid-area: header;
 }
 
-footer {
-  grid-area: footer;
+.footerIndex {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: footer;
   margin: 0.06em;
   padding: 0.3em;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(102, 102, 102, 0.726);
+}
+.footerIndex .iconsIndex {
+  display: flex;
+  gap: 0.5em;
+  margin-left: 1em;
 }
 
-/*.headerNav{
-    display: flex;
-    justify-content: space-between;
-
-}*/
-/*.navLinks{
-    display: none;
-}
-.navLogo{
-    color: var(--very-black);
-}*/
 a {
   text-decoration: none;
   color: rgb(0, 0, 0);
 }
 
+/*index*/
 .hero {
   display: flex;
   background-image: linear-gradient(0, rgba(0, 0, 0, 0.5), rgba(98, 91, 91, 0.5)), url(../img/hero.jpg);
@@ -65,67 +63,52 @@ a {
   grid-area: hero;
 }
 .hero .heroText {
-  color: rgb(240, 240, 240);
+  color: rgb(244, 244, 244);
   font-family: "Nunito";
   padding-left: 0.5em;
 }
 
-/*.questions{
-    grid-area: questions;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    line-height: 1.5;
-    color: var(--very-black);
-}*/
-/*.questionsCard{
-    border: 0.125em solid var(--black-);
-    margin: 0.125em;
-   background-color: rgba(255, 144, 60, 0.51);
+.marca {
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
-.questionsText{
-    letter-spacing: 0.08em;
-    color: var(--very-black);
-}*/
+.nav-link {
+  color: rgb(0, 0, 0);
+}
+.nav-link:hover {
+  color: rgb(255, 144, 60);
+}
+
+.cardTitle {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.questionsText {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.card p {
+  text-align: center;
+}
+
+/*MQ Index*/
 @media screen and (min-width: 768px) {
   .container {
     width: 85%;
     padding: 1.25em 0;
   }
-  /*.questionsCard{
-      margin: 0.2em;
-  }
-
-  .questionsTitle{
-      letter-spacing: 0.1em;
-  }*/
 }
 @media screen and (min-width: 1200px) {
   .container {
     width: 95%;
     padding: 1.25em 0;
   }
-  /*.navHamburger{
-      display: none;
-  }
-
-  .navLogo a{
-      font-size: 1.5em;
-  }
-
-  .navLinks{
-      display: flex;
-      align-items: center;
-      list-style: none;
-      gap: 3em;
-  }
-  .navLink:hover{
-      color: rgb(255, 144, 60);
-  }*/
   .hero {
     height: 85vh;
     background-size: cover;
@@ -134,27 +117,6 @@ a {
     align-items: center;
     font-size: 1.6em;
   }
-  /*.questions{
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, max-content);
-      grid-template-areas: 
-      "questionsTitleContainer questionsTitleContainer questionsTitleContainer"
-      "questionsCard1 questionsCard2 questionsCard3";
-  }
-
-  .questionsTitleContainer{
-      grid-area: questionsTitleContainer;
-  }
-  .questionsCard1{
-   grid-area: questionsCard1;
-  }
-  .questionsCard2{
-      grid-area: questionsCard2;
-  }
-  .questionsCard3{
-      grid-area: questionsCard3;
-  }*/
 }
 /*Collection*/
 .gridContainer2 {
@@ -182,9 +144,11 @@ a {
 .collection .containerCollectionTitle {
   grid-area: containerCollectionTitle;
   background-color: rgb(221, 184, 146);
+  height: 2.9em;
   box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
 }
 .collection .containerCollectionTitle .collectionTitle {
+  text-align: center;
   padding-top: 0.18em;
 }
 .collection .articleCollection1 {
@@ -219,6 +183,9 @@ a {
 .collectionDatos .titleDatosContainer {
   grid-area: titleDatos;
 }
+.collectionDatos .titleDatosContainer .titleDatos {
+  color: rgb(0, 0, 0);
+}
 .collectionDatos .cardDatos1 {
   grid-area: cardDatos1;
 }
@@ -229,11 +196,12 @@ a {
   grid-area: cardDatos3;
 }
 .collectionDatos .cardDatos {
-  border: 0.2em solid rgba(255, 144, 60, 0.51);
+  border: 0.2em solid rgb(0, 0, 0);
   margin: 0.312em;
+  box-shadow: 0.09em 0.16em rgba(0, 0, 0, 0.5);
 }
 .collectionDatos .cardDatos:hover {
-  background-color: rgb(221, 184, 146);
+  background-color: rgba(216, 222, 193, 0.841);
 }
 
 /*Collection y Accesories*/
@@ -247,6 +215,7 @@ a {
   background-color: rgba(255, 144, 60, 0.51);
 }
 
+/*MQ Collection*/
 @media screen and (min-width: 768px) {
   .articleCollection {
     height: 70vh;
@@ -259,7 +228,10 @@ a {
   }
 }
 @media screen and (min-width: 1200px) {
-  .articleCollection {
+  .collection .containerCollectionTitle {
+    height: 3.5em;
+  }
+  .collection .articleCollection {
     height: 100vh;
   }
   .collectionDatos {
@@ -270,7 +242,10 @@ a {
     grid-template-areas: "titleDatos titleDatos titleDatos" "cardDatos1 cardDatos2 cardDatos3";
   }
   .collectionDatos .cardDatos {
-    border: 0.125em solid rgba(255, 144, 60, 0.51);
+    border: 0.125em solid rgb(0, 0, 0);
+  }
+  .collectionDatos .cardDatos:hover {
+    color: rgb(7, 7, 7);
   }
   .collectionDatos .fontDatos {
     font-size: 1.3em;
@@ -297,8 +272,13 @@ a {
 }
 .accesories .containerAccesoriesTitle {
   grid-area: containerAccesoriesTitle;
-  background-color: rgba(185, 142, 89, 0.5);
+  background-color: rgb(221, 184, 146);
   box-shadow: 0.125em 0.125em rgba(255, 144, 60, 0.51);
+  height: 2.9em;
+}
+.accesories .containerAccesoriesTitle .accesoriesTitle {
+  text-align: center;
+  padding-top: 0.18em;
 }
 .accesories .accesoriesTeddy {
   grid-area: accesoriesTeddy;
@@ -321,6 +301,7 @@ a {
   background-repeat: no-repeat;
 }
 
+/*MQ accecories*/
 @media screen and (min-width: 768px) {
   .articleAccesories {
     height: 70vh;
@@ -350,6 +331,9 @@ a {
     grid-template-rows: repeat(2, max-content);
     grid-template-areas: "containerAccesoriesTitle containerAccesoriesTitle containerAccesoriesTitle" "accesoriesTeddy accesoriesMedias accesoriesBufanda";
     gap: 0.62em;
+  }
+  .accesories .containerAccesoriesTitle {
+    height: 3.5em;
   }
   .accesories .articleAccesories {
     height: 100vh;
@@ -528,17 +512,22 @@ a {
 }
 
 .btnLogin, .btnRegistrarse {
+  background-color: rgba(0, 0, 0, 0.386);
+  width: 25vw;
+  color: rgb(244, 244, 244);
+  font-family: "Nunito" sans-serif;
+  font-weight: 400;
   text-align: center;
   margin: 1em auto;
   padding: 0.12em;
-  border-radius: 15%;
-  border: 0.06em solid rgb(0, 0, 0);
+  border-radius: 10%;
+  border: 0.2em solid rgba(250, 250, 250, 0.739);
 }
 
 /*extend*/
 @media screen and (min-width: 768px) {
-  .btn {
-    width: 5em;
+  .btnLogin, .btnRegistrarse {
+    width: 4.5em;
     height: 2em;
   }
   .loginContainer, .signUpContainer {
@@ -554,58 +543,8 @@ a {
     justify-content: center;
     align-items: center;
   }
-  .btn {
-    width: 5em;
-    height: 2em;
+  .btnLogin, .btnRegistrarse {
+    width: 6em;
+    height: 2.5em;
   }
-}
-/*Animaciones*/
-.questionsCard:hover {
-  transition: background-color, scale 2s;
-  background-color: rgb(185, 142, 89);
-  transform: scale(1.02);
-  transition-delay: 1s;
-}
-
-/**/
-.marca {
-  display: flex;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.nav-link {
-  color: rgb(0, 0, 0);
-}
-
-.nav-link:hover {
-  color: rgb(255, 144, 60);
-}
-
-.cardTitle {
-  font-size: 1.7em;
-  font-weight: bold;
-  color: rgb(0, 0, 0);
-  text-align: center;
-}
-
-.questionsText {
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.card p {
-  text-align: center;
-}
-
-.footerIndex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footerIndex .iconsIndex {
-  display: flex;
-  gap: 0.5em;
-  margin-left: 1em;
 }/*# sourceMappingURL=estilos.css.map */
