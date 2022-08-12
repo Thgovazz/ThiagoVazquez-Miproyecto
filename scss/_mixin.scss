@@ -2,3 +2,11 @@
   @mixin backgroundFotos {
     background-size: cover;
 }
+
+@mixin estilobtnLogin{
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.31em;
+  margin: 0.24;
+}

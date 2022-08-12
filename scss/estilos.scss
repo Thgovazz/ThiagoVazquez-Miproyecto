@@ -50,6 +50,7 @@
     @include backgroundFotos;
     background-position: center;
     min-height: 18.75em;
+    height: 82vh;
     grid-area: hero;
     .heroText {
       color: $white;
@@ -186,10 +187,15 @@
     .cardDatos {
       border: 0.2em solid $very-black;
       margin: 0.312em;
-      box-shadow: 0.09em 0.16em $black;
+      box-shadow: 0 0.06em 0.6em $black;
+      cursor: default;
+      transition: all 400ms ease;
     }
     .cardDatos:hover {
       background-color: rgba(216, 222, 193, 0.841);
+      box-shadow: 0.31em 0.31em 1.25em $very-black;
+      transform: translateY(-3%)
+
     }
   }
   
@@ -498,6 +504,9 @@
     background-color: rgba(185, 142, 89, 0.5);
     text-align: center;
     grid-area: signUpContainer;
+    .loginText {
+       @include estilobtnLogin; 
+    }
   }
   
   .btnLogin {

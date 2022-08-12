@@ -60,6 +60,7 @@ a {
   background-size: cover;
   background-position: center;
   min-height: 18.75em;
+  height: 82vh;
   grid-area: hero;
 }
 .hero .heroText {
@@ -198,10 +199,14 @@ a {
 .collectionDatos .cardDatos {
   border: 0.2em solid rgb(0, 0, 0);
   margin: 0.312em;
-  box-shadow: 0.09em 0.16em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0.06em 0.6em rgba(0, 0, 0, 0.5);
+  cursor: default;
+  transition: all 400ms ease;
 }
 .collectionDatos .cardDatos:hover {
   background-color: rgba(216, 222, 193, 0.841);
+  box-shadow: 0.31em 0.31em 1.25em rgb(0, 0, 0);
+  transform: translateY(-3%);
 }
 
 /*Collection y Accesories*/
@@ -509,6 +514,13 @@ a {
   background-color: rgba(185, 142, 89, 0.5);
   text-align: center;
   grid-area: signUpContainer;
+}
+.signUpContainer .loginText {
+  font-family: "Nunito", "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 0.31em;
+  margin: 0.24;
 }
 
 .btnLogin, .btnRegistrarse {
